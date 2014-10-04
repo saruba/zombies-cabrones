@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 14</title>
+<style type="text/css">
+#Menu1 {
+	position:absolute;
+	left:99px;
+	top:69px;
+	width:67px;
+	height:26px;
+	z-index:1;
+	text-align: center;
+}
+#apDiv1 {
+	position:absolute;
+	left:168px;
+	top:61px;
+	width:59px;
+	height:22px;
+	z-index:2;
+}
+#apDiv2 {
+	position:absolute;
+	left:227px;
+	top:63px;
+	width:63px;
+	height:21px;
+	z-index:3;
+}
+#Menu4 {
+	position:absolute;
+	left:300px;
+	top:69px;
+	width:181px;
+	height:27px;
+	z-index:1;
+	text-align: center;
+	background-color: #999999;
+}
+#Menu3 {
+	position:absolute;
+	left:233px;
+	top:69px;
+	width:67px;
+	height:25px;
+	z-index:1;
+	text-align: center;
+}
+#Menu2 {
+	position:absolute;
+	left:166px;
+	top:69px;
+	width:67px;
+	height:27px;
+	z-index:1;
+	text-align: center;
+}
+#opMenu1 {
+	position:absolute;
+	left:99px;
+	top:94px;
+	width:67px;
+	height:0px;
+	z-index:2;
+	visibility: hidden;
+}
+#opMenu2 {
+	position:absolute;
+	left:166px;
+	top:94px;
+	width:66px;
+	height:84px;
+	z-index:3;
+	text-align: center;
+	visibility: hidden;
+}
+#opMenu3 {
+	position:absolute;
+	left:235px;
+	top:94px;
+	width:66px;
+	height:85px;
+	z-index:3;
+	text-align: center;
+	visibility: hidden;
+}
+#capaMickey {
+	position:absolute;
+	left:301px;
+	top:96px;
+	width:178px;
+	height:244px;
+	z-index:4;
+	visibility: hidden;
+}
+</style>
+<script src="../SpryAssets/SpryEffects.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_effectAppearFade(targetElement, duration, from, to, toggle)
+{
+	Spry.Effect.DoFade(targetElement, {duration: duration, from: from, to: to, toggle: toggle});
+}
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+function MM_effectGrowShrink(targetElement, duration, from, to, toggle, referHeight, growFromCenter)
+{
+	Spry.Effect.DoGrow(targetElement, {duration: duration, from: from, to: to, toggle: toggle, referHeight: referHeight, growCenter: growFromCenter});
+}
+</script>
+</head>
+
+<body>
+<div id="Menu1" onclick="MM_effectAppearFade('opMenu1', 1000, 0, 100, false)">Menu 1</div>
+<div id="opMenu1" onmouseout="MM_effectAppearFade('opMenu1', 1000, 100, 0, false)">
+  <p>Opcion 1</p>
+  <p>Opcion 2</p>
+  <p>Opcion 3</p>
+</div>
+<div id="opMenu2" onmouseout="MM_showHideLayers('opMenu2','','hide')">Cosa 1<br />
+  Cosa 2<br />
+  Cosa 3<br />
+Cosa 4</div>
+<div id="capaMickey" onmouseout="MM_showHideLayers('capaMickey','','hide')"><img src="../Images/mickey.gif" width="149" height="219" alt="mickey" /></div>
+<p>&nbsp;</p>
+<div id="Menu4" onmouseover="MM_showHideLayers('capaMickey','','show')" onmouseout="MM_effectGrowShrink('capaMickey', 1000, '100%', '0%', false, false, true)">Menu 4</div>
+<div id="Menu3" onmouseover="MM_showHideLayers('opMenu3','','show')">Menu 3</div>
+<p>&nbsp;</p>
+<div id="Menu2" onclick="MM_showHideLayers('opMenu2','','show')" onmouseout="MM_showHideLayers('opMenu2','','hide')">Menu 2</div>
+<div id="opMenu3" onmouseout="MM_showHideLayers('opMenu3','','hide')">Cosa 1<br />
+  Cosa 2<br />
+  Cosa 3<br />
+Cosa 4</div>
+<p>&nbsp;</p>
+</body>
+</html>

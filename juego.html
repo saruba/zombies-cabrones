@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Juego</title><meta name="keywords" content="juego zombies cabrones java zombie red zombiescabrones RMI" />
+<meta name="description" content="Pagina web dedicada a zombies cabrones, un juego programado en java con la particularidad de poder jugar en red" />
+
+<link href="zombieStile.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#divJugador {
+	position:absolute;
+	left:405px;
+	top:449px;
+	width:262px;
+	height:73px;
+	z-index:3;
+	visibility: hidden;
+}
+#divVida {
+	position:absolute;
+	left:537px;
+	top:490px;
+	width:163px;
+	height:57px;
+	z-index:3;
+	visibility: hidden;
+}
+#divMunicion {
+	position:absolute;
+	left:186px;
+	top:429px;
+	width:180px;
+	height:72px;
+	z-index:3;
+	visibility: hidden;
+}
+#divIV {
+	position:absolute;
+	left:45px;
+	top:427px;
+	width:244px;
+	height:91px;
+	z-index:3;
+	visibility: hidden;
+}
+#divIM {
+	position:absolute;
+	left:237px;
+	top:430px;
+	width:262px;
+	height:73px;
+	z-index:3;
+	visibility: hidden;
+}
+#divTiempo {
+	position:absolute;
+	left:448px;
+	top:444px;
+	width:247px;
+	height:76px;
+	z-index:3;
+	visibility: hidden;
+}
+#divZombie {
+	position:absolute;
+	left:235px;
+	top:406px;
+	width:369px;
+	height:19px;
+	z-index:3;
+	visibility: hidden;
+}
+</style>
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+</head>
+
+<body>
+<div id="divContenedor">
+  <div id="divCabecera">
+    <div id="divBanner"></div>
+    <div id="divMenu">      		
+      	<ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="juego.html">Juego</a></li>
+          <li><a href="applet.html">Applet</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contacta.html">Contacta</a></li>
+          <li><a href="donde.html">Donde estamos</a></li>
+        </ul>
+    </div>
+  </div>
+  <div id="divMain">
+    <h1>Zombies Cabrones</h1>
+    <p class="centrado"> <img src="images/pantallazo6.jpg" alt="captura de pantalla" width="700" height="268" border="0" usemap="#Map" />
+      <map name="Map" id="Map">
+        <area shape="rect" coords="332,175,372,221" href="#" alt="jugador" onmouseover="MM_showHideLayers('divJugador','','show')" onmouseout="MM_showHideLayers('divJugador','','hide')" />
+        <area shape="rect" coords="7,156,146,224" href="#" alt="zombie" onmouseover="MM_showHideLayers('divZombie','','show')" onmouseout="MM_showHideLayers('divZombie','','hide')" />
+        <area shape="rect" coords="666,215,701,250" href="#" alt="vida" onmouseover="MM_showHideLayers('divVida','','show')" onmouseout="MM_showHideLayers('divVida','','hide')" />
+        <area shape="rect" coords="243,211,284,248" href="#" alt="municion" onmouseover="MM_showHideLayers('divMunicion','','show')" onmouseout="MM_showHideLayers('divMunicion','','hide')" />
+        <area shape="rect" coords="437,246,682,307" href="#" alt="tiempo" onmouseover="MM_showHideLayers('divTiempo','','show')" onmouseout="MM_showHideLayers('divTiempo','','hide')" />
+        <area shape="rect" coords="241,252,436,283" href="#" alt="iMunicion" onmouseover="MM_showHideLayers('divIM','','show')" onmouseout="MM_showHideLayers('divIM','','hide')" />
+        <area shape="rect" coords="67,245,239,289" href="#" alt="iVida" onmouseover="MM_showHideLayers('divIV','','show')" onmouseout="MM_showHideLayers('divIV','','hide')" />
+        <area shape="rect" coords="559,159,664,228" href="#" alt="zombies" onmouseover="MM_showHideLayers('divZombie','','show')" onmouseout="MM_showHideLayers('divZombie','','hide')" />
+      </map>
+    <div id="divJugador" class="divMesaje">Protagonista:  eres quien debe sobre vivir. Si tienes suerte compartirás este papel con otros supervivientes</div>
+  <div id="divVida" class="divMesaje">Caja de vida: Pasa por encima para curarte.</div>
+      <div id="divMunicion" class="divMesaje">Caja de munición: Pasa por encima para recargar toda tu munición.</div>
+    <div id="divIV" class="divMesaje">Indicador de vida: Mide la vida que le queda a tu personaje. Contrólala si no quieres terminar antes de tiempo.</div>
+    <div id="divIM" class="divMesaje">Indicador de munición: Indica la munición que te queda. Cuidado, si llega a cero no podrás disparar.</div>
+    <div id="divTiempo" class="divMesaje">Medidor de tiempo: si consigues aguantar suficiente tiempo podrás ver un nuevo amanecer.</div>
+    <div id="divZombie"class="divMesaje">Zombie: tu enemigo, evita que se acerque.</div>
+    </p>
+    <p class="centrado">
+    Mueve el raton por encima de la imagen para conocer los detalles.
+    </p>
+    <br />
+  </div>
+</div>
+<div id="divPie">
+</div>
+<div id="diccionario">zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego zombies cabrones java red juego </div>
+</body>
+</html>

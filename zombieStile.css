@@ -1,0 +1,150 @@
+@charset "utf-8";
+body {
+	background-color: #000;
+	margin-left: 0px;
+	margin-right: 0px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+/*Divs*/
+#divContenedor {
+	position:relative;
+	width:760px;
+	height:auto;
+	z-index:1;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFF;
+}
+#divBanner {
+	background-image: url(images/fondoBanner.gif);
+	height: 200px;
+	width: 760px;
+}
+#divCabecera {
+	width: 100%;
+}
+#divMain {
+	height: auto;
+	width: 720px;
+	margin-top: 60px;
+	margin-right: 20px;
+	margin-bottom: 60px;
+	margin-left: 20px;
+}
+#divMenu {
+	background-color: #FFF;
+	position: relative;
+	width: 100%;
+}
+#divPie {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	z-index:2;
+	background-image: url(images/fondopie4.gif);
+	background-repeat: repeat-x;
+	height: 100px;
+	visibility: visible;
+}
+#diccionario {
+	position:absolute;
+	left:38px;
+	top:301px;
+	width:362px;
+	height:227px;
+	visibility: hidden;
+}
+/*Menu horizontal*/
+#divMenu ul {
+	padding: 0px;
+	margin: 0px;
+	background-color: #333;
+	list-style: none;
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	height: 30px;
+	float: left;
+}
+#divMenu ul li {
+	display: inline;
+} 
+#divMenu ul li a:link, #divMenu ul li a:visited {
+	background-color: #333;
+	color: #FFF;
+	padding: 5px 15px;
+	float: left;
+	text-decoration: none;
+}
+#divMenu ul li a:hover, #divMenu ul li a:active{
+	color: #F30;
+	background-color: #CCC;
+	height: 20px
+}
+h1 {
+	text-align: center;
+}
+/*Boton general*/
+.boton {
+	color: #000;
+	border: none;
+	width: 100%;
+	margin-top:5px;
+	margin-bottom:5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+	color:#fff;
+	line-height:12px;
+	background-color: #333;
+}
+/*Formulario*/
+.formulario {
+	font-size: 14px;
+}
+.formulario .label {
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	text-align: right;
+	font-weight: bold;
+	clear: left;
+	font-size: 12px;
+}
+
+.formulario .boton {
+	width: 150px;
+	margin-left: 320px;
+}
+
+.formulario p .radioB {
+	font-size: 10px;
+}
+
+.formulario .texto {
+	width: 350px;
+}#divEspacio {
+	height: 100px;
+	width: 100%;
+}
+#pFrame {
+	text-align: center;
+}
+.centrado {
+	text-align: center;
+}
+.divMesaje {
+	border: medium solid #099;
+	text-align: center;
+	color: #FFF;
+	background-color: #099;
+	margin-top: 10px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+table {
+	text-align: center;
+}

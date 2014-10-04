@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+body {
+	background-color: #06F;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+#divContenedor {
+	width: 780px;
+	background-color: #FFF;
+	margin: auto;
+}
+#divCabecera {
+	background-color: #000;
+	height: 150px;
+	width: 100%;
+}
+#divIzq {
+	position:relative;
+	width:160px;
+	height:400px;
+	z-index:1;
+	background-color: #FF0000;
+	float: left;
+}
+#divCentro {
+	position:relative;
+	left:0px;
+	top:0px;
+	width:620px;
+	height:300px;
+	z-index:2;
+	background-color: #9900FF;
+}

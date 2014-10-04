@@ -1,0 +1,203 @@
+<html><head><title>6sense.com: Free Java Applets</title>
+<META NAME="keywords" CONTENT="java,applets,webmaster">
+<META NAME="description" CONTENT="Get free java applets for your site.">
+<META NAME="robots" CONTENT="FOLLOW,INDEX">
+<META HTTP-EQUIV="Content-Language" CONTENT="EN">
+<script language="JavaScript">
+
+function open_win(u,w,h) {
+		w+=5;h+=8;
+		window.open(""+u,"Game",'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width='+w+',height='+h+',screenx='+((screen.availWidth/2)-(w/2))+',screeny='+((screen.availHeight/2)-(h/2)));
+}
+</script>
+<style TYPE="text/css">
+TD{    FONT-FAMILY: arial;    FONT-SIZE: 10pt}
+.nine{    FONT-FAMILY: arial;    FONT-SIZE: 9pt}
+.eight{    FONT-FAMILY: arial;    FONT-SIZE: 8pt}
+A:link{    COLOR: #ffef55;    TEXT-DECORATION: none}
+A:visited{    COLOR: #ffef55;    TEXT-DECORATION: none}
+A:hover{    COLOR: #70ffc0;    TEXT-DECORATION: underline}
+.fade1{    BACKGROUND-COLOR: #2e81e0;    COLOR: white;    FONT-SIZE: 9pt}
+.fade2{    BACKGROUND-COLOR: #0e41a0;    COLOR: white;    FONT-SIZE: 9pt}
+.fade3{    BACKGROUND-COLOR: #0e1180;    COLOR: azure}
+</style>
+</head>
+<body bgcolor=D3E1F7 text=ffffff link=FFEF55 vlink=FFEF55 alink=70FFC0 rightMargin=0 topMargin=0 leftMargin=0 bottomMargin=0>
+<center><BR><BR>
+
+<table border=0 cellpadding=2 cellspacing=0 width=530>
+<tr bgcolor=1E61D0 height=390 valign=top><td align=center>
+
+<table border=2 cellpadding=5 bordercolor=003060 bgcolor=000000 cellspacing=0><tr><td class=nine><b>
+[<a href="default.htm">applet</a>]
+ - [<a href="param.htm">parameter</a>]
+ - [<a href="example.htm">examples</a>]
+ - [<a href="code.htm">generate code</a>]
+</b></td></tr></table><BR>
+
+<!-- #include file="../include/header2.asp" -->
+<script language="JavaScript"><!--
+	function preview(fm){
+		if(gcode(fm)){
+		str = 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width='+(parseInt(fm.width.value)+10)+',height='+(parseInt(fm.height.value)+10);
+		previewWindow = window.open("","Preview",str);
+//		previewWindow = window.open("","Preview","toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=300,height=150");
+		previewWindow.document.open();
+		previewWindow.document.writeln("<HTML><HEAD><TITLE>Flame Applet v3.0</TITLE></HEAD>");
+		previewWindow.document.writeln("<BODY bgcolor=000000 LEFTMARGIN=0 TOPMARGIN=2 MARGINWIDTH=0 MARGINHEIGHT=0><CENTER>");
+		previewWindow.document.writeln(fm.code.value);
+		previewWindow.document.writeln("</center></body></head>");
+		previewWindow.document.close();
+		previewWindow.focus();
+		}
+	}
+	function linkcheck(fm){
+		if( fm.link[0].checked == true){
+			fm.id_key.disabled=false;
+			fm.maintext.disabled=false;
+			fm.mainlink.disabled=false;
+			}
+		else{
+			fm.id_key.disabled=true;
+			fm.maintext.disabled=true;
+			fm.mainlink.disabled=true;
+		}
+	}
+	function stoveCheck(fm){
+		if(fm.stove[1].checked&&fm.decay.value=='5')fm.decay.selectedIndex=7;
+	}
+	function gcode(fm){
+		if(fm.width.value==''){fm.width.focus(); alert('Width is missing');return false;}
+		if(fm.height.value==''){fm.height.focus(); alert('Height is missing');return false;}
+		if(isNaN(fm.width.value)){fm.width.focus(); alert('Width has to be a number');return false;;}
+		if(isNaN(fm.height.value)){fm.height.focus(); alert('Height has to be a number');return false;}
+		if(isNaN(fm.position.value)){fm.position.focus(); alert('Position has to be a number');return false;}
+		if(isNaN(fm.decay.value)){fm.decay.focus(); alert('Decay has to be a number');return false;}
+		if(fm.text.value==''){fm.text.focus(); alert('Text is missing');return false;}
+		
+		str=	'<applet archive=\"flame3.jar\" code=\"flame3.class\" width='+fm.width.value+' height='+fm.height.value+'>'+
+				'\n<param name=\"text\" value=\"'+fm.text.value+'\">';
+				
+		if(fm.target.value=='other'){if(fm.target_other.value!='')str=str+'\n<param name=\"target\" value=\"'+fm.target_other.value+'\">';}
+		else 
+		if(fm.target.value!='_blank')str=str+'\n<param name=\"target\" value=\"'+fm.target.value+'\">';
+
+		if(fm.color.value!='1')str=str+'\n<param name=\"color\" value=\"'+fm.color.value+'\">';
+		if(fm.font.value!='TimesRoman')str=str+'\n<param name=\"font\" value=\"'+fm.font.value+'\">';
+		if(fm.fontsize.value!='40')str=str+'\n<param name=\"fontsize\" value=\"'+fm.fontsize.value+'\">';
+		if(fm.decay.value!='5'||!fm.stove[0].checked)str=str+'\n<param name=\"decay\" value=\"'+fm.decay.value+'\">';
+		if(fm.position.value!='0')str=str+'\n<param name=\"position\" value=\"'+fm.position.value+'\">';
+		if(fm.solid[0].checked)str=str+'\n<param name=\"solid\" value=\"on\">';
+		if(fm.fade[1].checked)str=str+'\n<param name=\"fade\" value=\"off\">';
+		if(fm.stove[1].checked)str=str+'\n<param name=\"stove\" value=\"off\">';
+		if(fm.color_change[0].checked)str=str+'\n<param name=\"color_change\" value=\"yes\">';
+		
+		if(fm.maintext.disabled==false){
+			if(fm.maintext.value!=''&&fm.mainlink.value==''){fm.mainlink.focus(); alert('Main Link is missing');return false;}
+			else
+			if(fm.mainlink.value!=''&&fm.maintext.value==''){fm.maintext.focus(); alert('Main Text is missing');return false;}
+			else
+			if(fm.mainlink.value!=''&&fm.maintext.value!='')
+			str = str+
+				'\n<param name=\"maintext\" value=\"'+fm.maintext.value+'\">'+
+				'\n<param name=\"mainlink\" value=\"'+fm.mainlink.value+'\">';
+			if(fm.id_key.value!='')str=str+'\n<param name=\"id_key\" value=\"'+fm.id_key.value+'\">';
+		}
+			
+		fm.code.value=str+'\n</applet>';
+		return true;
+	}
+--></script>
+
+<table border=0 cellpadding=3 cellspacing=0 width="100%"><form name=code>
+<tr class=fade1><td colspan=2> &nbsp;<font color=FFFFFF><b>Note:</td></tr>
+<tr class=fade2><td colspan=2 align=center>
+This section requires JavaScript so if you have if off, this feature will not function.<BR><BR>
+</td></tr>
+
+<tr class=fade1><td colspan=2> &nbsp;<font color=FFFFFF><b>Required Parameters:</td></tr>
+<tr class=fade2><td colspan=2 align=center>
+<table border=0 cellpadding=2 cellspacing=2 width="100%">
+<tr class=fade3>	<td width="20%"><B>Width</b></td><td width="30%"><input name="width" size=3 maxlength=3 value=300></td>
+					<td width="20%"><B>Height</b></td><td width="30%"><input name="height" size=3 maxlength=3 value=150></td></tr>
+</table>					
+</td></tr>
+
+<tr class=fade1><td colspan=2> &nbsp;<font color=FFFFFF><b>Optional Parameters:</td></tr>
+<tr class=fade2><td colspan=2 align=center>
+<table border=0 cellpadding=2 cellspacing=2 width="100%">
+<tr class=fade3>	<td width="20%"><B>Target</b></td><td width="30%"><select name="target"><option value="_blank">_blank<option value="_top">_top<option value="_parent">_parent<option value="_self">_self<option value="other">other</select></td>
+					<td width="50%" colspan=2>if other target: <input name="target_other" size=20 value=""></td>
+</tr>
+<tr class=fade3><td><B>Text</b></td><td colspan=3><textarea name="text" cols=30 rows=6>Words+Separated+By+Plus+Signs</textarea></td></tr>
+</table>
+</td></tr>
+
+<tr class=fade1><td colspan=2> &nbsp;<font color=FFFFFF><b>Optional Text Parameters:</td></tr>
+<tr class=fade2><td colspan=2 align=center>
+<table border=0 cellpadding=2 cellspacing=2 width="100%">
+<tr class=fade3>	<td width="20%"><B>Font</b></td><td width="30%"><select name="font"><option value="TimesRoman">TimesRoman<option value="Courier">Courier<option value="Dialog">Dialog<option value="DialogInput">DialogInput<option value="Helvetica">Helvetica<option value="Symbol">Symbol</select></td>
+					<td width="20%"><B>Font Size</b></td><td width="30%">
+					<select name="fontsize"><option value="10" >10<option value="11" >11<option value="12" >12<option value="13" >13<option value="14" >14<option value="15" >15<option value="16" >16<option value="17" >17<option value="18" >18<option value="19" >19<option value="20" >20<option value="21" >21<option value="22" >22<option value="23" >23<option value="24" >24<option value="25" >25<option value="26" >26<option value="27" >27<option value="28" >28<option value="29" >29<option value="30" >30<option value="31" >31<option value="32" >32<option value="33" >33<option value="34" >34<option value="35" >35<option value="36" >36<option value="37" >37<option value="38" >38<option value="39" >39<option value="40" selected>40<option value="41" >41<option value="42" >42<option value="43" >43<option value="44" >44<option value="45" >45<option value="46" >46<option value="47" >47<option value="48" >48<option value="49" >49<option value="50" >50<option value="51" >51<option value="52" >52<option value="53" >53<option value="54" >54<option value="55" >55<option value="56" >56<option value="57" >57<option value="58" >58<option value="59" >59<option value="60" >60<option value="61" >61<option value="62" >62<option value="63" >63<option value="64" >64<option value="65" >65<option value="66" >66<option value="67" >67<option value="68" >68<option value="69" >69<option value="70" >70<option value="71" >71<option value="72" >72<option value="73" >73<option value="74" >74<option value="75" >75<option value="76" >76<option value="77" >77<option value="78" >78<option value="79" >79<option value="80" >80<option value="81" >81<option value="82" >82<option value="83" >83<option value="84" >84<option value="85" >85<option value="86" >86<option value="87" >87<option value="88" >88<option value="89" >89<option value="90" >90<option value="91" >91<option value="92" >92<option value="93" >93<option value="94" >94<option value="95" >95<option value="96" >96<option value="97" >97<option value="98" >98<option value="99" >99<option value="100" >100<option value="101" >101<option value="102" >102<option value="103" >103<option value="104" >104<option value="105" >105<option value="106" >106<option value="107" >107<option value="108" >108<option value="109" >109<option value="110" >110<option value="111" >111<option value="112" >112<option value="113" >113<option value="114" >114<option value="115" >115<option value="116" >116<option value="117" >117<option value="118" >118<option value="119" >119<option value="120" >120<option value="121" >121<option value="122" >122<option value="123" >123<option value="124" >124<option value="125" >125<option value="126" >126<option value="127" >127<option value="128" >128<option value="129" >129<option value="130" >130<option value="131" >131<option value="132" >132<option value="133" >133<option value="134" >134<option value="135" >135<option value="136" >136<option value="137" >137<option value="138" >138<option value="139" >139<option value="140" >140<option value="141" >141<option value="142" >142<option value="143" >143<option value="144" >144<option value="145" >145<option value="146" >146<option value="147" >147<option value="148" >148<option value="149" >149<option value="150" >150<option value="151" >151<option value="152" >152<option value="153" >153<option value="154" >154<option value="155" >155<option value="156" >156<option value="157" >157<option value="158" >158<option value="159" >159<option value="160" >160<option value="161" >161<option value="162" >162<option value="163" >163<option value="164" >164<option value="165" >165<option value="166" >166<option value="167" >167<option value="168" >168<option value="169" >169<option value="170" >170<option value="171" >171<option value="172" >172<option value="173" >173<option value="174" >174<option value="175" >175<option value="176" >176<option value="177" >177<option value="178" >178<option value="179" >179<option value="180" >180<option value="181" >181<option value="182" >182<option value="183" >183<option value="184" >184<option value="185" >185<option value="186" >186<option value="187" >187<option value="188" >188<option value="189" >189<option value="190" >190<option value="191" >191<option value="192" >192<option value="193" >193<option value="194" >194<option value="195" >195<option value="196" >196<option value="197" >197<option value="198" >198<option value="199" >199<option value="200" >200</select>
+					</td></tr>
+<tr class=fade3>	<td width="20%"><B>Position</b></td><td width="30%"><input name="position" size=4 maxlength=4 value=0></td>
+					<td width="20%"><B>Solid</b></td><td width="30%"><input class=rdark type=radio name=solid value="on">On &nbsp;<input class=rdark type=radio name=solid value="off" checked>Off</td></tr>
+<tr class=fade3>	<td width="20%"><B>Color</b></td><td width="30%">
+<select name="color">
+<option value="1">1. Fire
+<option value="2">2. Green
+<option value="3">3. Ash Blue
+<option value="4">4. Midnight Purple
+<option value="5">5. Black & White
+<option value="6">6. Rose Pink
+</select></td>
+					<td width="20%"><B>Color_Change</b></td><td width="30%"><input class=rdark type=radio name=color_change value="yes">Yes &nbsp;<input class=rdark type=radio name=color_change value="no" checked>No</td></tr>
+</table>
+</td></tr>
+
+<tr class=fade1><td colspan=2> &nbsp;<font color=FFFFFF><b>Optional Flame Parameters:</td></tr>
+<tr class=fade2><td colspan=2 align=center>
+<table border=0 cellpadding=2 cellspacing=2 width="100%">
+<tr class=fade3>	<td width="20%"><B>Fade</b></td><td width="30%"><input class=rdark type=radio name=fade value="on" checked>On &nbsp;<input class=rdark type=radio name=fade value="off">Off</td>
+					<td width="20%"><B>Decay</b></td><td width="30%"><select name="decay">
+					<option value="5">5 (large flame)
+					<option value="6">6
+					<option value="7">7
+					<option value="8">8
+					<option value="9">9
+					<option value="10">10
+					<option value="11">11
+					<option value="12">12
+					<option value="13">13
+					<option value="14">14
+					<option value="15">15
+					<option value="16">16
+					<option value="17">17
+					<option value="18">18
+					<option value="19">19
+					<option value="20">20 (small flame)</select></td></tr>
+<tr class=fade3>	<td width="20%"><B>Stove</b></td><td width="30%"><input class=rdark type=radio name=stove value="on" checked>On &nbsp;<input class=rdark type=radio name=stove value="off" onClick="stoveCheck(this.form);">Off</td>
+					<td colspan=2><BR></td></tr>
+</table>
+</td></tr>
+
+<tr class=fade1><td colspan=2> &nbsp;<font color=FFFFFF><b>Full Version Parameters:</b> &nbsp; <input checked class=rlite type=radio name=link value="on" onClick="linkcheck(this.form);">On &nbsp;<input class=rlite type=radio name=link value="off" onClick="linkcheck(this.form);">Off</td></tr>
+<tr class=fade2><td colspan=2>
+<table border=0 cellpadding=2 cellspacing=2 width="100%">
+<tr class=fade3><td><B>ID_Key</b></td><td><input name="id_key" size=30 value="6s890667530995822119"></td></tr>
+<tr class=fade3><td width="40%"><B>Main Text</b></td width="60%"><td><input name="maintext" size=30 value=""></td></tr>
+<tr class=fade3><td width="40%"><B>Main Link</b></td width="60%"><td><input name="mainlink" size=30 value=""></td></tr>
+</table>
+</td></tr>
+<tr class=fade1><td colspan=2 align=center><input class=a1 type=reset value="Reset"></td></tr>
+<tr class=fade2><td colspan=2 align=center><textarea style="font-size:8pt;color:60FFA0;background:000000" name="code" cols=40 rows=20></textarea></td></tr>
+<tr class=fade1><td colspan=2 align=center><input class=a1 type=button value="Generate Code" onCLick="gcode(this.form);"> &nbsp; <input class=a1 type=button value="Preview" onCLick="preview(this.form);"></td></tr>
+</form></table>
+<!-- #include file="../include/footer.asp" -->
+
+<BR></td></tr>
+<tr bgcolor=0e31a0><td align=center><font size=1>CopyRight &copy; 1999-2002 <a href="http://www.ionchron.com">IonChron, Inc.</a> &nbsp; &nbsp; <a style="font-size:8pt;" href="http://www.6sense.com/applets/privacy.htm">Privacy Policy</a><BR></td></tr>
+</table>
+<BR>
+</BODY></HTML>
+

@@ -1,0 +1,17 @@
+a:visited {
+	text-decoration: line-through;
+}
+a:hover {
+	color: #F90;
+	cursor: crosshair;
+}
+a:link {
+	text-decoration: none;
+}
+.verde {
+	font-family: Arial;
+	font-size: 18px;
+	color: #FFFFFF;
+	background-color: #00CC00;
+	cursor: crosshair;
+}

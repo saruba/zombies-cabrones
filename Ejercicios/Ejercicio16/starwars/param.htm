@@ -1,0 +1,94 @@
+<html><head><title>6sense.com: Free Java Applets</title>
+<META NAME="keywords" CONTENT="java,applets,webmaster">
+<META NAME="description" CONTENT="Get free java applets for your site.">
+<META NAME="robots" CONTENT="FOLLOW,INDEX">
+<META HTTP-EQUIV="Content-Language" CONTENT="EN">
+<script language="JavaScript">
+
+function open_win(u,w,h) {
+		w+=5;h+=8;
+		window.open(""+u,"Game",'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width='+w+',height='+h+',screenx='+((screen.availWidth/2)-(w/2))+',screeny='+((screen.availHeight/2)-(h/2)));
+}
+</script>
+<style TYPE="text/css">
+TD{    FONT-FAMILY: arial;    FONT-SIZE: 10pt}
+.nine{    FONT-FAMILY: arial;    FONT-SIZE: 9pt}
+.eight{    FONT-FAMILY: arial;    FONT-SIZE: 8pt}
+A:link{    COLOR: #ffef55;    TEXT-DECORATION: none}
+A:visited{    COLOR: #ffef55;    TEXT-DECORATION: none}
+A:hover{    COLOR: #70ffc0;    TEXT-DECORATION: underline}
+.fade1{    BACKGROUND-COLOR: #2e81e0;    COLOR: white;    FONT-SIZE: 9pt}
+.fade2{    BACKGROUND-COLOR: #0e41a0;    COLOR: white;    FONT-SIZE: 9pt}
+.fade3{    BACKGROUND-COLOR: #0e1180;    COLOR: azure}
+</style>
+</head>
+<body bgcolor=D3E1F7 text=ffffff link=FFEF55 vlink=FFEF55 alink=70FFC0 rightMargin=0 topMargin=0 leftMargin=0 bottomMargin=0>
+<center><BR><BR>
+
+<table border=0 cellpadding=2 cellspacing=0 width=530>
+<tr bgcolor=1E61D0 height=390 valign=top><td align=center>
+
+<table border=2 cellpadding=5 bordercolor=003060 bgcolor=000000 cellspacing=0><tr><td class=nine><b>
+[<a href="default.htm">applet</a>]
+ - [<a href="param.htm">parameter</a>]
+ - [<a href="example.htm">examples</a>]
+ - [<a href="code.htm">generate code</a>]
+</b></td></tr></table><BR>
+
+<!-- #include file="../include/header2.asp" -->
+<table border=0 cellpadding=3 cellspacing=0>
+<tr class=fade1><td> &nbsp;<font color=FFFFFF><b>How to use:</td></tr>
+<tr class=fade2><td><font color="#FFEE00">
+<BR>&nbsp;&nbsp;&lt;<font color=FFFF44>APPLET</font> <font color=77FF77>archive</font>="starwars.jar" <font color=77FF77>code</font>="starwars.class" <font color=77FF77>width</font>=500 <font color=77FF77>height</font>=250&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="target" <font color=77FF77>value</font>="_blank"&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="delay" <font color=77FF77>value</font>="(0-800)"&gt;
+<BR>
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="maxlines" <font color=77FF77>value</font>="1"&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="line#" <font color=77FF77>value</font>="Starwars"&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="color#" <font color=77FF77>value</font>="FFFFFF"&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="textcolor" <font color=77FF77>value</font>="50FAC8"&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="align" <font color=77FF77>value</font>="center"&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="fontsize" <font color=77FF77>value</font>="20"&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="font" <font color=77FF77>value</font>="TimesRoman"&gt;
+<BR>
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="mainlink" <font color=77FF77>value</font>="http://www.6sense.com"&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<font color=FFFF44>param</font> <font color=77FF77>name</font>="maintext" <font color=77FF77>value</font>="Starwars by 6sense.com"&gt;
+<BR>&nbsp;&nbsp;&lt;/<font color=FFFF44>APPLET</font>&gt;
+</FONT><BR><BR>
+</td></tr>
+
+<tr class=fade1><td colspan=3> &nbsp;<font color=FFFFFF><b>Text Parameters</td></tr><tr class=fade2><td>
+<table border=0 cellpadding=2 cellspacing=2 width=100%>
+<tr valign=top class=fade3><td width=80><b><font color="#50EE40">maxlines</td><td width=80>[number]</td><td>Number of lines to process for the scrolling text</td></tr>
+<tr valign=top class=fade3><td><b><font color="#50EE40">line#</td><td>[string]</td><td>Replace # with line number. Text for line #.</td></tr>
+<tr valign=top class=fade3><td><b><font color="#50EE40">color#</td><td>[color]</td><td>Replace # with line number. Optional different color for this line, otherwise use default.</td></tr>
+<tr valign=top class=fade3><td><b><font color="#50EE40">align</td><td>[align]</td><td>Alignment of the scrolling text. (left,center,right)</td></tr>
+<tr valign=top class=fade3><td><b><font color="#50EE40">fontsize</td><td>[number]</td><td>Size of the font.<BR><B>Default:</b> 11</td></tr>
+<tr valign=top class=fade3><td><b><font color="#50EE40">font</td><td>[font]</td><td>Type of font you which to use. Limited only to java fonts.<BR><B>Default:</b> TimesRoman</td></tr>
+<tr valign=top class=fade3><td><b><font color="#50EE40">textcolor</td><td>[color]</td><td>Set default color for normal text.<BR><B>Default: <font color=C0E0FF>C0E0FF</font></b></td></tr>
+</table>
+</td></tr>
+<tr class=fade1><td colspan=3> &nbsp;<font color=FFFFFF><b>Optional Parameters</td></tr><tr class=fade2><td>
+<table border=0 cellpadding=2 cellspacing=2 width=100%>
+<tr valign=top class=fade3><td width=80><b><font color="#50EE40">Delay</td><td width=80>[number]</td><td>The Delay speed for the scrolling text<UL><li>(0-800)<LI>150 (<b><font color=00FFFF>default</font></b>)</uL></td></tr>
+<tr valign=top class=fade3><td><b><font color="#50EE40">target</td><td>[target]</td><td>Target of new link.<ul><li><b>_blank</b> (<b><font color=00FFFF>default</font></b>)<li><b>_top</b><li><b>_parent</b><li><b>_self</b></ul></td></tr>
+</table>
+</td></tr>
+
+<tr class=fade1><td colspan=3> &nbsp;<font color=FFFFFF><b>Additional Parameters [ Full Version Only ]</td></tr>
+<tr class=fade2><td>
+
+<table border=0 cellpadding=2 cellspacing=2 width=100%>
+<tr valign=top class=fade3><td width=80><b><font color="#50EE40">mainlink</td><td width=80>[url]</td><td>Web address of the main link which appears on the top right corner when mouse iso ver the applet. Make sure the value is a valid web address with <b>"http://"</b> in front of it.</td></tr>
+<tr valign=top class=fade3><td><b><font color="#50EE40">maintext</td><td>[string]</td><td>Text string to display for the top corner main link. This is appears for the viewer.</td></tr>
+</table>
+
+</td></tr></table>
+
+<!-- #include file="../include/footer.asp" -->
+<BR></td></tr>
+<tr bgcolor=0e31a0><td align=center><font size=1>CopyRight &copy; 1999-2002 <a href="http://www.ionchron.com">IonChron, Inc.</a> &nbsp; &nbsp; <a style="font-size:8pt;" href="http://www.6sense.com/applets/privacy.htm">Privacy Policy</a><BR></td></tr>
+</table>
+<BR>
+</BODY></HTML>
+

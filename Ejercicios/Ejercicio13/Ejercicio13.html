@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 13</title>
+<style type="text/css">
+#azul {
+	position:absolute;
+	left:202px;
+	top:136px;
+	width:534px;
+	height:352px;
+	z-index:1;
+	color: #00F;
+	background-color: #0000FF;
+}
+#amarillo {
+	position:absolute;
+	left:39px;
+	top:30px;
+	width:226px;
+	height:178px;
+	z-index:2;
+	background-color: #FFFF00;
+}
+#rojo {
+	position:absolute;
+	left:110px;
+	top:122px;
+	width:191px;
+	height:131px;
+	z-index:3;
+	background-color: #FF0000;
+}
+#verde {
+	position:absolute;
+	left:511px;
+	top:175px;
+	width:190px;
+	height:235px;
+	z-index:4;
+	background-color: #00FF00;
+}
+#Morada {
+	position:absolute;
+	left:43px;
+	top:220px;
+	width:208px;
+	height:113px;
+	z-index:5;
+	background-color: #FF00FF;
+	visibility: visible;
+}
+</style>
+<script src="../SpryAssets/SpryEffects.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_effectAppearFade(targetElement, duration, from, to, toggle)
+{
+	Spry.Effect.DoFade(targetElement, {duration: duration, from: from, to: to, toggle: toggle});
+}
+function MM_changeProp(objId,x,theProp,theValue) { //v9.0
+  var obj = null; with (document){ if (getElementById)
+  obj = getElementById(objId); }
+  if (obj){
+    if (theValue == true || theValue == false)
+      eval("obj.style."+theProp+"="+theValue);
+    else eval("obj.style."+theProp+"='"+theValue+"'");
+  }
+}
+</script>
+</head>
+
+<body>
+<div id="azul">
+  <div id="amarillo">
+    <p>Hija de Azul</p>
+    <p>Hereda todo de la Azul</p>
+  </div>
+<div id="rojo">
+  <p>Hija de la Azul</p>
+  <p>Hereda todo de la Azul</p>
+</div>
+<div id="Morada">
+  <p>Hija de la Azul</p>
+  <p>Vis = Visible</p>
+</div>
+</div>
+<div id="verde">Es Independiente</div>
+<p>
+  <input name="Ocultar" type="submit" id="Ocultar" onclick="MM_effectAppearFade('azul', 1000, 100, 0, false)" value="Desvanecer Capas" />
+  <input name="Ocultar3" type="submit" id="Ocultar3" onclick="MM_effectAppearFade('azul', 1000, 0, 100, false)" value="Aparecer Visible" />
+</p>
+<p>
+  <input name="Ocultar2" type="submit" id="Ocultar2" onclick="MM_changeProp('azul','','visibility','hidden','DIV')" value="Ocultar" />
+  <input name="Ocultar4" type="submit" id="Ocultar4" onclick="MM_changeProp('azul','','visibility','visible','DIV')" value="Visible" />
+</p>
+<p>&nbsp;</p>
+</body>
+</html>

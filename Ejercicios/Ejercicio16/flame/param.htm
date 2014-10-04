@@ -1,0 +1,131 @@
+<html><head><title>6sense.com: Free Java Applets</title>
+<META NAME="keywords" CONTENT="java,applets,webmaster">
+<META NAME="description" CONTENT="Get free java applets for your site.">
+<META NAME="robots" CONTENT="FOLLOW,INDEX">
+<META HTTP-EQUIV="Content-Language" CONTENT="EN">
+<script language="JavaScript">
+
+function open_win(u,w,h) {
+		w+=5;h+=8;
+		window.open(""+u,"Game",'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width='+w+',height='+h+',screenx='+((screen.availWidth/2)-(w/2))+',screeny='+((screen.availHeight/2)-(h/2)));
+}
+</script>
+<style TYPE="text/css">
+TD{    FONT-FAMILY: arial;    FONT-SIZE: 10pt}
+.nine{    FONT-FAMILY: arial;    FONT-SIZE: 9pt}
+.eight{    FONT-FAMILY: arial;    FONT-SIZE: 8pt}
+A:link{    COLOR: #ffef55;    TEXT-DECORATION: none}
+A:visited{    COLOR: #ffef55;    TEXT-DECORATION: none}
+A:hover{    COLOR: #70ffc0;    TEXT-DECORATION: underline}
+.fade1{    BACKGROUND-COLOR: #2e81e0;    COLOR: white;    FONT-SIZE: 9pt}
+.fade2{    BACKGROUND-COLOR: #0e41a0;    COLOR: white;    FONT-SIZE: 9pt}
+.fade3{    BACKGROUND-COLOR: #0e1180;    COLOR: azure}
+</style>
+</head>
+<body bgcolor=D3E1F7 text=ffffff link=FFEF55 vlink=FFEF55 alink=70FFC0 rightMargin=0 topMargin=0 leftMargin=0 bottomMargin=0>
+<center><BR><BR>
+
+<table border=0 cellpadding=2 cellspacing=0 width=530>
+<tr bgcolor=1E61D0 height=390 valign=top><td align=center>
+
+<table border=2 cellpadding=5 bordercolor=003060 bgcolor=000000 cellspacing=0><tr><td class=nine><b>
+[<a href="default.htm">applet</a>]
+ - [<a href="param.htm">parameter</a>]
+ - [<a href="example.htm">examples</a>]
+ - [<a href="code.htm">generate code</a>]
+</b></td></tr></table><BR>
+
+<!-- #include file="../include/header2.asp" -->
+
+<table border=0 cellpadding=3 cellspacing=0>
+<tr class=fade1><td> &nbsp;<font color=FFFFFF><b>How to use:</td></tr>
+<tr class=fade2><td><UL><BR><font color="#FFEE00">
+&lt;APPLET code="flame3.class" width=250 height=110&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"text"</FONT> value=<font color="#EEEEEE">"Words+Seperated+By+Plus+Signs"</font>&gt;
+<BR>
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"font"</FONT> value=<font color="#EEEEEE">"font name"</FONT>&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"fontsize"</FONT> value=<font color="#EEEEEE">"40"</FONT>&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"position"</FONT> value=<font color="#EEEEEE">"0"</FONT>&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"solid"</FONT> value=<font color="#EEEEEE">"on/off"</FONT>&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"color"</FONT> value=<font color="#EEEEEE">"(1-5)"</FONT>&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"color_change"</FONT> value=<font color="#EEEEEE">"yes/no"</FONT>&gt;
+<BR>
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"fade"</FONT> value=<font color="#EEEEEE">"on/off"</FONT>&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"stove"</FONT> value=<font color="#EEEEEE">"on/off"</FONT>&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"decay"</FONT> value=<font color="#EEEEEE">"(5-20)"</FONT>&gt;
+<BR>
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"mainlink"</FONT> value=<font color="#EEEEEE">"URL Address"</FONT>&gt;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=<font color="#EEEEEE">"maintext"</FONT> value=<font color="#EEEEEE">"Name of Link"</FONT>&gt;
+<BR>&lt;/APPLET&gt;<BR>
+</FONT></UL>
+</td></tr>
+<tr class=fade1><td> &nbsp;<font color=FFFFFF><b>Required Parameters</td></tr>
+<tr class=fade2><td>
+
+<table border=0 cellpadding=2 cellspacing=2 width=100%>
+<tr class=fade3 valign=top><td width=130><b><font color="#50EE40">"text"</FONT></td><td> String holding the words to display in the applet. Seperated each frame of words by '+'</td></tr>
+</table>
+
+</td></tr>
+<tr class=fade1><td colspan=3> &nbsp;<font color=FFFFFF><b>Optional Text Parameters</td></tr><tr class=fade2><td>
+
+<table border=0 cellpadding=2 cellspacing=2 width=100%>
+<tr class=fade3 valign=top><td width=130><b><font color="#50EE40">"font"</FONT></td><td> Type of font you which to use. Limited only to java fonts.</td></tr>
+<tr class=fade3 valign=top><td width=130><b><font color="#50EE40">"fontsize"</FONT></td><td> Font size of the burning words.<BR><B>Default</b>: 40</td></tr>
+<tr class=fade3 valign=top><td><b><font color="#50EE40">"position"</FONT></td><td>
+Vectical position of the words relative to the middle.</td></tr>
+<tr class=fade3 valign=top><td><b><font color="#50EE40">"solid"</FONT></td><td><uL>
+<li><b>"off"</b> :  (default) Keep color of the text the same as the flame.
+<li><b>"on"</b> : Use a solid color for the text.
+</uL></td></tr>
+
+<tr class=fade3 valign=top><td><b><font color="#50EE40">"color"</FONT></td><td>Color you wish to use.<OL>
+<li><font color=FFEF55><b>fire</b></font> (default)
+<li><font color=30EF55><b>green</b></font>
+<li><font color=603FEF><b>ash blue</b></font>
+<li><font color=FD20F1><b>midnight purple</b></font>
+<li><font color=AAAAAA><b>black&white</b></font>
+<li><font color=FF3060><b>Rose Pink</b></font>
+</ol></td></tr>
+<tr class=fade3 valign=top><td><b><font color="#50EE40">"color_change"</FONT></td><td><uL>
+<li><b>"no"</b> : (default) Don't allow viewers to change colors.
+<li><b>"yes"</b> : Allow viewers change colors of the flame.
+</uL></td></tr>
+</table>
+
+</td></tr>
+<tr class=fade1><td colspan=3> &nbsp;<font color=FFFFFF><b>Optional Flame Parameters</td></tr><tr class=fade2><td>
+
+<table border=0 cellpadding=2 cellspacing=2 width=100%>
+<tr class=fade3 valign=top><td width=130><b><font color="#50EE40">"fade"</FONT></td><td><uL>
+<li><b>"on"</b> : (default) Fade away words with the flame.
+<li><b>"off"</b> : No fade away effect wehn display words.
+</uL></td></tr>
+<tr class=fade3 valign=top><td><b><font color="#50EE40">"stove"</FONT></td><td><uL>
+<li><b>"on"</b> : (default) Burning flame from the bottom on.
+<li><b>"off"</b> : Turn off the burning flame on the bottom.
+</uL></td></tr>
+<tr class=fade3 valign=top><td><b><font color="#50EE40">"decay"</FONT></td><td>
+(5-20) Intensity of the flame. The lower the number the larger the flame.
+<BR><B>Default when Stove on:</b> 9
+<BR><B>Default when Stove off:</b> 12</td></tr>
+</table>
+
+</td></tr>
+<tr class=fade1><td colspan=3> &nbsp;<font color=FFFFFF><b>Additional Parameters [ Full Version Only ]</td></tr>
+<tr class=fade2><td>
+
+<table border=0 cellpadding=2 cellspacing=2 width=100%>
+<tr class=fade3 valign=top><td width=130><b><font color="#50EE40">"mainlink"</FONT></td><td>URL of the web site you wish to link to.</td></tr>
+<tr class=fade3 valign=top><td><b><font color="#50EE40">"maintext"</FONT></td><td>The name of the link site you with to be display.</td></tr>
+</table>
+
+</td></tr></table>
+
+<!-- #include file="../include/footer.asp" -->
+<BR></td></tr>
+<tr bgcolor=0e31a0><td align=center><font size=1>CopyRight &copy; 1999-2002 <a href="http://www.ionchron.com">IonChron, Inc.</a> &nbsp; &nbsp; <a style="font-size:8pt;" href="http://www.6sense.com/applets/privacy.htm">Privacy Policy</a><BR></td></tr>
+</table>
+<BR>
+</BODY></HTML>
+

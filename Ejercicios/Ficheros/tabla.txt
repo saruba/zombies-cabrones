@@ -1,0 +1,7 @@
+Nombre; Edad
+Miguel; 25
+Luis; 37
+Ángel; 23
+Marta; 26
+Vanessa; 17
+Roberto; 62
